@@ -1,0 +1,24 @@
+version: '3'
+services:
+  gateway:
+    depends_on:
+      - sensor1
+    entrypoint: ["java", "-jar", "test.jar"]
+  sensor1:
+    entrypoint: ["java", "-jar", "test.jar"]
+  sensor2:
+    entrypoint: ["echo","not included in test!"]
+  sensor3:
+    entrypoint: ["echo","not included in test!"]
+  server:
+    entrypoint: ["java", "-jar", "test.jar"]
+  database:
+    entrypoint: ["java", "-jar", "test.jar"]
+  mqttsensor1:
+    entrypoint: ["java", "-jar", "test.jar"]
+  adapter1:
+    entrypoint: ["java", "-jar", "test.jar"]
+  mqttsensor2:
+    entrypoint: [ "java", "-jar", "test.jar" ]
+  adapter2:
+    entrypoint: [ "java", "-jar", "test.jar" ]
